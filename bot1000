@@ -1,0 +1,13 @@
+import os
+
+folder = "/storage/emulated/0/kod.bot.bale 💯"
+db_path = os.path.join(folder, "empire_game.db")
+
+if os.path.exists(db_path):
+    os.remove(db_path)
+    print(f"✅ دیتابیس پاک شد!")
+else:
+    print(f"❌ دیتابیس توی {folder} پیدا نشد!")
+    print("📁 محتوای پوشه:")
+    for f in os.listdir(folder):
+        print(f"   → {f}")
